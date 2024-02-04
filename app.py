@@ -40,7 +40,9 @@ def generate_gemini_content(transcript_text, prompt):
     return response.text
 
 
-st.title("YouTube Transcript (English) to Detailed Notes Converter")
+st.set_page_config(layout="wide")
+st.subheader(
+    "YouTube English Transcript to Detailed Notes Converter using Google Gemini Pro")
 youtube_link = st.text_input("Enter YouTube Video Link:")
 
 if youtube_link:
@@ -56,7 +58,7 @@ if st.button("Get Detailed Notes"):
         summary = generate_gemini_content(transcript_text, prompt)
         st.markdown("## Detailed Notes:")
         st.write(summary)
-        
+
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
