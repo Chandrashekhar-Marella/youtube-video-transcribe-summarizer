@@ -40,7 +40,7 @@ def generate_gemini_content(transcript_text, prompt):
     return response.text
 
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="centered")
 st.subheader(
     "YouTube English Transcript to Detailed Notes Converter using Google Gemini Pro")
 youtube_link = st.text_input("Enter YouTube Video Link:")
