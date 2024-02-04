@@ -56,3 +56,12 @@ if st.button("Get Detailed Notes"):
         summary = generate_gemini_content(transcript_text, prompt)
         st.markdown("## Detailed Notes:")
         st.write(summary)
+        
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
